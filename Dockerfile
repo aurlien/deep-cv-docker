@@ -33,10 +33,10 @@ RUN pip3 install --no-cache-dir \
 RUN mkdir /code
 RUN mkdir /tmp/tflearn_logs
 
-WORKDIR "/project"
+WORKDIR "/home/project"
 
 # Setting up volumes
-VOLUME ["/project", "/tmp/tflearn_logs"]
+VOLUME ["/home/project", "/tmp/tflearn_logs"]
 
 # TensorBoard
 EXPOSE 6006
