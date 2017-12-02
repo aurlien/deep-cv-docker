@@ -1,21 +1,24 @@
-# Build
-```bash
-docker build -t deep-cv -f Dockerfile .
-```
+# Docker image for Deep Learning and computer vision
 
-# Run 
+This is a setup made to make it fast and simple to setup a new environment for deep learning development.
+Enabling GPU-support is as simple as seting a single variable (USE_GPU) to True, which makes it easy
+to use this setup on both your local environment, and on a remote workstation or cloud environment.
 
-**Ipython**
-```bash
-docker run -it -v $(pwd):/project deep-ml bash
-```
+Packages included:
 
-**Ipython**
-```bash
-docker run -it -v $(pwd):/project deep-ml ipython
-```
+- Python 3.5
+- Tensorflow
+- Keras
+- Opencv 3
+- Numpy
+- Matplotlib
+- Seaborn
 
-**Jupyter notebook**
-```bash
-docker run -d -v $(pwd):/project -p 8888:8888 -p 6006:6006 deep-cv
-```
+## Usage:
+
+1. Start jupyter notebook instance:
+    `make jupyter`
+1. Start bash shell:
+    `make jupyter`
+    
+
