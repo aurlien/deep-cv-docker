@@ -1,7 +1,6 @@
 # Base image
 FROM gcr.io/tensorflow/tensorflow:latest-py3
 
-
 # Installing ubuntu packages
 RUN  apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
@@ -43,4 +42,3 @@ EXPOSE 6006
 EXPOSE 8888
 
 CMD jupyter notebook --no-browser --ip=0.0.0.0 --allow-root --NotebookApp.token='deep-cv'
-
