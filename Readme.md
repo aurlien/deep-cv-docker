@@ -20,5 +20,12 @@ Packages included:
     `make jupyter`
 1. Start bash shell:
     `make jupyter`
+
+
+## Prerequesites:
+- docker
+
+If you want to run with GPU-support:
+- nvidia-docker
     
 
