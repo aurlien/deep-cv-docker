@@ -36,9 +36,11 @@ WORKDIR /app
 VOLUME ["/app"]
 
 # TensorBoard
+RUN mkdir /logs/
 EXPOSE 6006
 
 # jupyter
 EXPOSE 8888
 
 CMD jupyter notebook --no-browser --ip=0.0.0.0 --allow-root --NotebookApp.token='deep-cv'
+CMD tensorboard --logdir=/logs/
